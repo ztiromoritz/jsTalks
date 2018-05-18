@@ -1,0 +1,37 @@
+html, body, * {
+    margin: 0;
+    padding: 0;
+}
+
+.previewEditor {
+    font-size: 0.6em;
+}
+
+.previewEditor .previewButton {
+    font-size: 17px;
+}
+
+.head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: red;
+}
+.left {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 50%;
+    height: 90vh;
+    background-color: blue;
+}
+
+.right {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    width: 50%;
+    height: 100vh;
+}

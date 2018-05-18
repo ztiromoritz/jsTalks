@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Tests</title>
+    <link rel="stylesheet" href="./css/minislides.css">
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+
+<body>
+
+
+<!-- each section is a slide -->
+<section data-id="foo">
+
+    <div class="head">
+    <h1>Test</h1>
+    </div>
+    <div class="left">
+        <textarea
+                data-kelenken-tabs="js"
+                data-kelenken-template="./templates/mocha._"
+                data-kelenken-out="exampleAResult">
+const f = (x)=>x**x;
+describe('The function f', ()=>{
+    it('should square the shit out of x', ()=>{
+        expect(f(2)).to.be.equal(4);
+    });
+});
+        </textarea>
+    </div>
+    <div class="right" id="exampleAResult">
+
+    </div>
+</section>
+
+
+
+<section data-bg="#607d8b">
+    <h1>the</h1>
+</section>
+
+<section data-bg="#dd00dd">
+    <h1>slides</h1>
+    <ul>
+        <li>Was man alles testen sollte</li>
+        <li>ungetype</li>
+        <li>Method exists</li>
+        <li>Code compiles</li>
+    </ul>
+</section>
+<section>
+    bdd
+    tdd
+    ???
+
+    async
+    * promises
+    * done
+</section>
+
+
+
+
+<script src="./js/minislides.js"></script>
+<script src="./js/kelenken/kelenken.js"></script>
+<script>
+    kelenken.scan({
+        template: './templates/mocha._' // TODO in kelenken
+    });
+</script>
+</body>
+</html>
+<!--
+Copyright 2016 Thomas Rosenau
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
