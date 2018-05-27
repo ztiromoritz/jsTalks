@@ -14,18 +14,17 @@
 
     <div class="head"><h1>Test</h1></div>
     <div class="left">
-        <textarea data-laufvogel-tabs="js"
-                  data-laufvogel-out="exampleAResult">
-            const f = (x)=>x**x;
-            const expect = chai.expect;
-            describe('The function f', ()=>{
-                it('should calc x^x', ()=>{
-                    expect(f(2)).to.be.equal(4);
-                });
-            });
+        <textarea data-laufvogel data-laufvogel-out="ex_a">
+const f = (x)=>x**x;
+const expect = chai.expect;
+describe('The function f', ()=>{
+    it('should calc x^x', ()=>{
+        expect(f(2)).to.be.equal(4);
+    });
+});
         </textarea>
     </div>
-    <div class="right" id="exampleAResult"></div>
+    <div class="right" id="ex_a"></div>
 </section>
 
 
