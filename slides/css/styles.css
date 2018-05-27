@@ -3,8 +3,17 @@ html, body, * {
     padding: 0;
 }
 
+.previewArea {
+    width: 100%;
+}
+
 .previewEditor {
-    font-size: 0.6em;
+    font-size: 1.7vw;
+    width: 100%;
+}
+
+.previewEditor .CodeMirror {
+    width: 100%;
 }
 
 .previewEditor .previewButton {
@@ -21,7 +30,7 @@ html, body, * {
 }
 .left {
     position: absolute;
-    top: 10vh;
+    top: 10vw;
     left: 0;
     width: 50%;
     height: 90vh;
@@ -33,5 +42,5 @@ html, body, * {
     top: 100px;
     left: 50%;
     width: 50%;
-    height: 100vh;
+    height: 90vh;
 }

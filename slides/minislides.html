@@ -3,38 +3,30 @@
 <head>
     <meta charset="utf-8">
     <title>JavaScript Tests</title>
-    <link rel="stylesheet" href="./css/minislides.css">
-    <link rel="stylesheet" href="./css/styles.css">
+
 
 </head>
 
 <body>
 
-
 <!-- each section is a slide -->
 <section data-id="foo">
 
-    <div class="head">
-    <h1>Test</h1>
-    </div>
+    <div class="head"><h1>Test</h1></div>
     <div class="left">
-        <textarea
-                data-kelenken-tabs="js"
-                data-kelenken-template="./templates/mocha._"
-                data-kelenken-out="exampleAResult">
-const f = (x)=>x**x;
-describe('The function f', ()=>{
-    it('should square the shit out of x', ()=>{
-        expect(f(2)).to.be.equal(4);
-    });
-});
+        <textarea data-laufvogel-tabs="js"
+                  data-laufvogel-out="exampleAResult">
+            const f = (x)=>x**x;
+            const expect = chai.expect;
+            describe('The function f', ()=>{
+                it('should calc x^x', ()=>{
+                    expect(f(2)).to.be.equal(4);
+                });
+            });
         </textarea>
     </div>
-    <div class="right" id="exampleAResult">
-
-    </div>
+    <div class="right" id="exampleAResult"></div>
 </section>
-
 
 
 <section data-bg="#607d8b">
@@ -61,15 +53,17 @@ describe('The function f', ()=>{
 </section>
 
 
-
-
 <script src="./js/minislides.js"></script>
-<script src="./js/kelenken/kelenken.js"></script>
+<script src="./js/laufvogel/laufvogel.js"></script>
 <script>
-    kelenken.scan({
-        template: './templates/mocha._' // TODO in kelenken
+
+
+    laufvogel.scan({
+        template: './templates/mocha._'
     });
 </script>
+<link rel="stylesheet" href="./css/minislides.css">
+<link rel="stylesheet" href="./css/styles.css">
 </body>
 </html>
 <!--
