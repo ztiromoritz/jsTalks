@@ -15,13 +15,14 @@
     <div class="head"><h1>Test</h1></div>
     <div class="left">
         <textarea data-laufvogel data-laufvogel-out="ex_a">
-const f = (x)=>x**x;
-const expect = chai.expect;
-describe('The function f', ()=>{
-    it('should calc x^x', ()=>{
-        expect(f(2)).to.be.equal(4);
-    });
-});
+            const f = (x)=>x**x;
+            const expect = chai.expect;
+            describe('The function f', ()=>{
+                it('should calc x^x', ()=>{
+                    expect(f(2)).to.be.equal(4);
+                });
+            });
+
         </textarea>
     </div>
     <div class="right" id="ex_a"></div>
@@ -56,10 +57,20 @@ describe('The function f', ()=>{
 <script src="./js/laufvogel/laufvogel.js"></script>
 <script>
 
+    const preprocessTextarea = ()=> {
+        const unindent = (text) => {
+            const lines = text.split('\n');
+            const firstLine = lines[0];
+            const indent = firstLine.search(/\S/);
+            return lines.map((_) => _.slice(indent)).join('\n');
+        }
+        const textareas = Array.prototype.slice.call(document.querySelectorAll('textarea'));
+        textareas.forEach(_ => _.innerHTML = unindent(_.innerHTML));
+    }
 
-    laufvogel.scan({
-        template: './templates/mocha._'
-    });
+
+    preprocessTextarea();
+    laufvogel.scan({template: './templates/mocha._'});
 </script>
 <link rel="stylesheet" href="./css/minislides.css">
 <link rel="stylesheet" href="./css/styles.css">
