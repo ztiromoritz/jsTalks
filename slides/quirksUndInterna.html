@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Quirks&Interna</title>
+
+
+</head>
+
+<body>
+
+<section>
+    <div class="head"><h1>Dreifaltigkeit</h1></div>
+    <div class="middle">
+        <img src="./img/jstrinity.jpg">
+    </div>
+
+</section>
+
+<!-- each section is a slide -->
+<section data-id="foo">
+
+    <div class="head"><h1>Test</h1></div>
+    <div class="left">
+        <textarea data-laufvogel data-laufvogel-out="ex_a">
+            const f = (x)=>x**x;
+            const expect = chai.expect;
+            describe('The function f', ()=>{
+                it('should calc x^x', ()=>{
+                    expect(f(2)).to.be.equal(4);
+                });
+            });
+
+        </textarea>
+    </div>
+    <div class="right" id="ex_a"></div>
+</section>
+
+
+<section data-bg="#607d8b">
+    <h1>the</h1>
+</section>
+
+<section data-bg="#dd00dd">
+    <h1>slides</h1>
+    <ul>
+        <li>Was man alles testen sollte</li>
+        <li>ungetype</li>
+        <li>Method exists</li>
+        <li>Code compiles</li>
+    </ul>
+</section>
+<section>
+    bdd
+    tdd
+    ???
+
+    async
+    * promises
+    * done
+</section>
+
+
+<script src="./js/minislides.js"></script>
+<script src="./js/laufvogel/laufvogel.js"></script>
+<script>
+
+    const preprocessTextarea = ()=> {
+        const unindent = (text) => {
+            const lines = text.split('\n');
+            const firstLine = lines[0];
+            const indent = firstLine.search(/\S/);
+            return lines.map((_) => _.slice(indent)).join('\n');
+        }
+        const textareas = Array.prototype.slice.call(document.querySelectorAll('textarea'));
+        textareas.forEach(_ => _.innerHTML = unindent(_.innerHTML));
+    }
+
+
+    preprocessTextarea();
+    laufvogel.scan({template: './templates/mocha._'});
+</script>
+<link rel="stylesheet" href="./css/minislides.css">
+<link rel="stylesheet" href="./css/styles.css">
+</body>
+</html>
+<!--
+Copyright 2016 Thomas Rosenau
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
