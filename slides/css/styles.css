@@ -47,6 +47,6 @@ html, body, * {
     position: absolute;
     top: 100px;
     left: 0;
-    width: 50vw;
+    width: 100vw;
     height: 90vh;
 }

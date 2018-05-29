@@ -8,11 +8,11 @@ body, html {
 }
 
 body.loaded {
-    transition: .3s
+   /* transition: .3s */
 }
 
 body.loaded section {
-    transition: opacity .5s
+    /*transition: opacity .5s*/
 }
 
 section {

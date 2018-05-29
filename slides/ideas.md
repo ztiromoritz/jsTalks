@@ -7,7 +7,7 @@
  * WebWorker
  * Rust und Web Assembly
  * The JavaScript Event loop
- * Promises
+ * Callback, Promises, Async/Await
  * SVG, CSS
  * Modules: https://twitter.com/mathias/status/996133744917409792 
  * 3 Anekdoten: value of this, clojures, prototypes
