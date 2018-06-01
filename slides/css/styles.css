@@ -27,9 +27,10 @@ html, body, * {
     width: 100%;
     height: 10vh;
 }
+
 .left {
     position: absolute;
-    top: 10vw;
+    top: 10vh;
     left: 0;
     width: 50%;
     height: 90vh;
@@ -37,7 +38,7 @@ html, body, * {
 
 .right {
     position: absolute;
-    top: 100px;
+    top: 10vh;
     left: 50%;
     width: 50%;
     height: 90vh;
@@ -45,8 +46,15 @@ html, body, * {
 
 .middle {
     position: absolute;
-    top: 100px;
+    top: 10vh;
     left: 0;
     width: 100vw;
     height: 90vh;
+}
+
+.shownLaufvogelPreview iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: white;
 }
