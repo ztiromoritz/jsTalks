@@ -1,6 +1,7 @@
 html, body, * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .previewArea {
@@ -57,4 +58,29 @@ html, body, * {
     width: 100%;
     border: none;
     background-color: white;
+}
+
+.full {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+
+.full img:first-child {
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    object-position: 0 0;
+    height: 100%;
+    width: 100%;
+}
+
+.full div {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
 }

@@ -8,9 +8,12 @@
 
 <body>
 
-<section data-id="foo" data-bg="#aaffff">
+<section data-id="foo" data-bg="#ffeedd">
     <div class="full">
-        <h1>Full title</h1>
+        <img src="./img/testing.jpg">
+        <div>
+            <h1 style="color: #ffffff; text-shadow: 2px 2px #ff0000;">Automated testing in JavaScript</h1>
+        </div>
     </div>
 </section>
 
@@ -62,7 +65,7 @@
 <script src="./js/laufvogel/laufvogel.js"></script>
 <script>
 
-    const preprocessTextarea = ()=> {
+    const preprocessTextarea = () => {
         const unindent = (text) => {
             const lines = text.split('\n');
             const firstLine = lines[0];
@@ -75,7 +78,13 @@
 
 
     preprocessTextarea();
-    laufvogel.scan({template: './templates/mocha._'});
+    laufvogel.scan({
+        template: './templates/mocha._',
+        codemirror: {
+            mode: 'javascript',
+            keyMap : 'vim'
+        }
+    });
 </script>
 <link rel="stylesheet" href="./css/minislides.css">
 <link rel="stylesheet" href="./css/styles.css">
