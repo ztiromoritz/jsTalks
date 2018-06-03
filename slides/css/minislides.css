@@ -8,7 +8,7 @@ body, html {
 }
 
 body.loaded {
-   /* transition: .3s */
+    /* transition: .3s */
 }
 
 body.loaded section {
@@ -48,7 +48,7 @@ img {
 .laserPointerParent {
     position: absolute;
     z-index: 10;
-    display:none;
+    display: none;
     width: 100%;
     height: 100%;
 }
@@ -82,5 +82,112 @@ img {
     height: 100%;
     pointer-events: none;
     z-index: 10;
+}
+
+
+:root {
+    --element-width: 20vw;
+    --mid: calc(var(--element-width) / 2);
+    --aw: 30vw;
+    --bw: 35vw;
+}
+
+@keyframes wobble{
+    0% {
+        margin: 0 0 0 calc((var(--mid) * -1) + 1vw);
+    }
+
+    25% {
+        margin: 0 0 0 calc(var(--mid) * -1);
+    }
+
+    50% {
+        margin: 0 0 0 calc((var(--mid) * -1) - 1vw);
+    }
+
+    75% {
+        margin: 0 0 0 calc(var(--mid) * -1);
+    }
+
+    100% {
+        margin: 0 0 0 calc((var(--mid) * -1) + 1vw);
+    }
+}
+
+.mindmap {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    line-height: 7vh;
+
+}
+
+.mindmap ul {
+    list-style-type: none;
+}
+
+.mindmap ul li {
+    position: absolute;
+    padding: 0;
+    display: block;
+    width: var(--element-width);
+    /**margin: 0 0 0 calc(var(--mid) * -1);**/
+    animation: wobble 20s ease-out;
+    animation-iteration-count: infinite;
+    /**background: grey;**/
+    text-align: center;
+}
+
+.mindmap ul li:nth-child(1) {
+    top: -35vh;
+    left: 0;
+    animation-delay: -1s;
+}
+
+.mindmap ul li:nth-child(2) {
+    top: -21vh;
+    left: calc((var(--aw) * -1) );
+    animation-delay: -2s;
+}
+
+.mindmap ul li:nth-child(3) {
+    top: 0vh;
+    left: calc((var(--bw) * -1));
+    animation-delay: -4s;
+}
+
+.mindmap ul li:nth-child(4) {
+    top: 21vh;
+    left: calc((var(--aw) * -1));
+    animation-delay: -3s;
+}
+
+.mindmap ul li:nth-child(5) {
+    top: 35vh;
+    left: 0;
+    animation-delay: -0.5s;
+}
+
+.mindmap ul li:nth-child(6) {
+    top: 21vh;
+    left: var(--aw);
+    animation-delay: -1.5s;
+}
+
+.mindmap ul li:nth-child(7) {
+    top: 0;
+    left: var(--bw);
+    animation-delay: -2.5s;
+}
+
+.mindmap ul li:nth-child(8) {
+    top: -21vh;
+    left: var(--aw);
+}
+
+
+.grad1 {
+    background: rgb(221,238,221);
+    background: linear-gradient(9deg,rgba(87,242,87,1)  0%, rgba(221,238,221,1) 100%);
 }
 

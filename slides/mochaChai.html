@@ -8,18 +8,74 @@
 
 <body>
 
-<section data-id="foo" data-bg="#ffeedd">
+<section data-id="a" data-bg="#ffeedd">
+    <img src="./img/testing.jpg">
     <div class="full">
-        <img src="./img/testing.jpg">
-        <div>
-            <h1 style="color: #ffffff; text-shadow: 2px 2px #ff0000;">Automated testing in JavaScript</h1>
+        <h1 style="color: #ffffff; text-shadow: 2px 2px #ff0000;">Automated testing in JavaScript</h1>
+    </div>
+</section>
+
+<section data-id="b" data-bg="#ffeedd">
+    <img src="./img/trianglify.png">
+    <div class="full ">
+        <h1 style="color: #ffffff; text-shadow: 2px 2px #ff0000;">What we need</h1>
+        <div class="mindmap">
+            <ul>
+                <li>Structure</li>
+                <li>Reports</li>
+                <li>Coverage</li>
+                <li>Mocks & Spies</li>
+                <li></li>
+                <li>Browser environment</li>
+                <li></li>
+                <li>Assertions</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section data-id="c" class="grad1">
+    <canvas class="particles"></canvas>
+    <div class="full text-box">
+        <div class="center">
+            <h1 style="color: #ffffff; text-shadow: 2px 2px #ff0000;">Structure</h1>
         </div>
     </div>
 </section>
 
 
+<section data-id="d" data-bg="#ffffff">
+    <img src="./img/shapes1.png">
+    <div class="full">
+        <h1 style="color: #ffffff; text-shadow: 2px 2px #ff0000;">Assertions</h1>
+    </div>
+</section>
+
+<section data-id="dd" data-bg="#ffffff">
+    <img src="./img/triangles-download.svg">
+    <div class="full">
+        <h1 style="color: #ffffff; text-shadow: 2px 2px #ff0000;">Reports</h1>
+    </div>
+</section>
+
+
+<section data-id="ddd" data-bg="#ffffff">
+    <img src="./img/cool-background.svg">
+    <div class="full">
+        <h1 style="color: #ffffff; text-shadow: 2px 2px #ff0000;">Coverage</h1>
+    </div>
+</section>
+
+<section data-id="d" data-bg="#ffffff">
+    <img src="./img/smoke.png">
+    <div class="full">
+        <h1 style="color: #ffffff; text-shadow: 2px 2px #ff0000;">Mocks & Spies</h1>
+    </div>
+</section>
+
+
 <!-- each section is a slide -->
-<section data-id="foo">
+<section data-id="e">
 
     <div class="head"><h1>Test</h1></div>
     <div class="left">
@@ -63,6 +119,7 @@
 
 <script src="./js/minislides.js"></script>
 <script src="./js/laufvogel/laufvogel.js"></script>
+<script src="./js/particles.min.js"></script>
 <script>
 
     const preprocessTextarea = () => {
@@ -82,8 +139,15 @@
         template: './templates/mocha._',
         codemirror: {
             mode: 'javascript',
-            keyMap : 'vim'
+            keyMap: 'vim'
         }
+    });
+
+
+    Particles.init
+    ({
+        selector: '.particles',
+        connectParticles: true
     });
 </script>
 <link rel="stylesheet" href="./css/minislides.css">
